@@ -1,10 +1,23 @@
 package deliv5;
 
 import static org.junit.Assert.*;
-
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+
 public class BoardTest {
+	
+	
+	Board b;
+	
+	@Before
+	public void init()
+	{
+		b = new Board();
+	}
 	
 
 	// I start with testing the initial print of the game board
@@ -12,8 +25,6 @@ public class BoardTest {
 	@Test
 	public void drawInitialBoard_test()
 	{
-		
-		Board b = new Board();
 		assertEquals(b.drawInitialBoard()," | | \n------\n | | \n------\n | | \n");
 	}
 
