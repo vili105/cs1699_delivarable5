@@ -11,7 +11,7 @@ public class MainGameTest {
 	public void validInput_test()
 	{	
 		MainGame g = new MainGame();
-		assertTrue(g.validInput('x'));
+		assertTrue(g.validInput(1,1));
 	}
 
 }
