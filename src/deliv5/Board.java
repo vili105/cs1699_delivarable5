@@ -135,7 +135,28 @@ public class Board
 	// Implementation of statePrint(). The code is just enough to satisfy the test
 	public void statePrint()
 	{
-		System.out.print("x|o|x\n------\no|x| \n------\n | | \n");
+		for(int i=0; i<3; i++)
+		{
+			for(int j=0; j<3; j++)
+			{	
+				System.out.print(positions[i][j]);
+				
+				if(j<2)
+				{
+					System.out.print("|");
+				}
+			}
+			
+			System.out.print("\n");
+			
+			if(i<2)
+			{
+				System.out.print("------");
+			}
+			
+			System.out.print("\n");
+			
+		}
 	}
 }
 

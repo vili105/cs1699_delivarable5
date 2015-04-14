@@ -124,7 +124,20 @@ public class BoardTest {
 		b.set(1,1, 'x');
 		b.statePrint();
 		assertTrue(out.toString().contains("x|o|x\n------\no|x| \n------\n | | \n"));
-		
+	}
+	
+	
+	// Test a method that prints the state of the board
+	@Test
+	public void statePrint_test1()
+	{
+		b.set(0,0, 'x');
+		b.set(1,2, 'o');
+		b.set(0,2, 'x');
+		b.set(1,0, 'o');
+		b.set(1,1, 'x');
+		b.statePrint();
+		assertTrue(out.toString().contains("x| |x\n------\no|x|o\n------\n | | \n"));
 	}
 	
 	
