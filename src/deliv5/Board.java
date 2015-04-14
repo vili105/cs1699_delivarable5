@@ -94,7 +94,7 @@ public class Board
 		
 		for(int i=0; i<3; i++)
 		{
-			if(positions[0][i]==positions[1][i] && positions[1][i] ==positions[2][i])
+			if(positions[0][i]!=' ' && positions[0][i]==positions[1][i] && positions[1][i] ==positions[2][i])
 			{
 				flag = true;
 			}
