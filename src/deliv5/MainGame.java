@@ -45,7 +45,6 @@ public class MainGame {
 		p_input[0] = in.nextInt();
 		System.out.println("y: ");
 		p_input[1] = in.nextInt();
-		in.close();
 		return p_input;
 		
 	}
