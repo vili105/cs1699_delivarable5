@@ -44,4 +44,5 @@ public class MainGameTest {
 		assertEquals(temp[1],2);
 		
 	}
+	
 }

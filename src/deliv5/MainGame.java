@@ -21,6 +21,7 @@ public class MainGame {
 	// Implementation of handling the player's input
 	public int[] Input()
 	{
+		System.out.println("Enter the coordinates of the position of your choosing.");
 		int[] p_input = new int[2];
 		Scanner in = new Scanner(System.in);
 		p_input[0] = in.nextInt();
@@ -29,6 +30,7 @@ public class MainGame {
 		return p_input;
 		
 	}
+	
 	
 
 }
