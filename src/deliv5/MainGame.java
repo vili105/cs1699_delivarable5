@@ -70,7 +70,7 @@ public class MainGame {
 		
 		if(b.checkReady()==true)
 		{
-			if (b.rowWin() || b.columnWin() || b.diagRLWin() || b.diagRLWin())
+			if (b.rowWin() || b.columnWin() || b.diagLRWin() || b.diagRLWin())
 			{
 				return player;
 			}
