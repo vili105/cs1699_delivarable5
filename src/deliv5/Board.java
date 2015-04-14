@@ -70,7 +70,7 @@ public class Board
 		}
 	}
 	
-	// Implementation of the rowWin() method
+	// Implementation of the rowWin() method which searches for a winner by checking the rows
 	public Boolean rowWin()
 	{
 		Boolean flag = false;
@@ -86,6 +86,8 @@ public class Board
 		return true;
 	}
 	
+	
+	// Implementation of the columnWin() method which searches for a winner by checking the columns
 	public Boolean columnWin()
 	{
 		Boolean flag = false;
@@ -101,4 +103,21 @@ public class Board
 		return flag;
 	}
 
+	
+	// // Implementation of the diagLRWin() method which searches for a winner by checking the LR diagonal
+	public Boolean diagLRWin()
+	{
+		if(positions[0][0]==positions[1][1] && positions[1][1] ==positions[2][2])
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
+
+
+
+

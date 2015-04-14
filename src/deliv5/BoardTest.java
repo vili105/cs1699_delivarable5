@@ -83,6 +83,18 @@ public class BoardTest {
 		assertTrue(b.columnWin());	
 	}
 	
+	// Test a method that checks if there is a winner by filling the diagonal cells from left to right with identical characters
+	@Test
+	public void diagLRWin_test()
+	{
+		b.set(0,0, 'x');
+		b.set(1,0, 'o');
+		b.set(1,1, 'x');
+		b.set(2,0, 'o');
+		b.set(2,2, 'x');
+		assertTrue(b.diagLRWin());	
+	}
+	
 	
 	
 }
