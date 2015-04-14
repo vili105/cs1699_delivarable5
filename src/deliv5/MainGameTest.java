@@ -66,9 +66,10 @@ public class MainGameTest {
 	@Test
 	public void Init_test()
 	{
+		out = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(out));
 		g.Init();
-		assertTrue(out.toString().contains("x|o|x\n------\no|x| \n------\n | | \n"));
+		assertTrue(out.toString().contains(" | | \n------\n | | \n------\n | | \n"));
 	}
 	
 	

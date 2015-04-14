@@ -41,7 +41,9 @@ public class MainGame {
 		System.out.println("Enter the coordinates of the position of your choosing.");
 		int[] p_input = new int[2];
 		Scanner in = new Scanner(System.in);
+		System.out.println("x: ");
 		p_input[0] = in.nextInt();
+		System.out.println("y: ");
 		p_input[1] = in.nextInt();
 		in.close();
 		return p_input;
@@ -52,7 +54,6 @@ public class MainGame {
 	// Implementation of the game logic
 	public int Run()
 	{
-		boolean win = false;
 		int[] position = new int[2];
 		
 		this.player = (this.player% 2)+1;
@@ -70,22 +71,16 @@ public class MainGame {
 		
 		if(b.checkReady()==true)
 		{
-			win = b.rowWin();
-			win = b.columnWin();
-			win = b.diagRLWin();
-			win = b.diagRLWin();
+			if (b.rowWin() || b.columnWin() || b.diagRLWin() || b.diagRLWin())
+			{
+				return player;
+			}
 		}
-		
+
 		b.statePrint();
 		
-		if(win==true)
-		{
-			return player;
-		}
-		else
-		{
-			return 0;
-		}
+		return 0;
+
 	}
 		
 	
