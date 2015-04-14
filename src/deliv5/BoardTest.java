@@ -67,8 +67,22 @@ public class BoardTest {
 		b.set(0,1, 'x');
 		b.set(2,2, 'o');
 		b.set(0,2, 'x');
-		assertTrue(b.rowWin());
-		
+		assertTrue(b.rowWin());	
 	}
+	
+	
+	// Test a method that checks if there is a winner by filling a column with identical characters
+	@Test
+	public void columnWin_test()
+	{
+		b.set(0,1, 'x');
+		b.set(1,0, 'o');
+		b.set(1,1, 'x');
+		b.set(2,2, 'o');
+		b.set(2,1, 'x');
+		assertTrue(b.columnWin());	
+	}
+	
+	
 	
 }

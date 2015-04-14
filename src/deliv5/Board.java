@@ -86,5 +86,19 @@ public class Board
 		return true;
 	}
 	
+	public Boolean columnWin()
+	{
+		Boolean flag = false;
+		
+		for(int i=0; i<3; i++)
+		{
+			if(positions[0][i]==positions[1][i] && positions[1][i] ==positions[2][i])
+			{
+				flag = true;
+			}
+		}
+		
+		return flag;
+	}
 
 }
