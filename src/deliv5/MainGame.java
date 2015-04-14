@@ -15,6 +15,12 @@ public class MainGame {
 	}
 	
 	
+	// Initializing method
+	public void Init()
+	{
+		b.drawInitialBoard();
+	}
+	
 	// Function that tests if the input is valid
 	public Boolean validInput(int x, int y)
 	{
@@ -43,7 +49,7 @@ public class MainGame {
 	}
 	
 	
-	// Implementation of the driver function
+	// Implementation of the game logic
 	public int Run()
 	{
 		boolean win = false;
@@ -83,6 +89,34 @@ public class MainGame {
 	}
 		
 	
-	
+	// Main function
+	public static void main (String[] args)
+	{
+		int count = 0;
+		int flag = 0;
+		MainGame mg = new MainGame();
+		
+		System.out.println("------------Tic Tac Toe--------------");
+		mg.Init();
+		
+		while(count<9 && flag==0)
+		{
+			flag = mg.Run();
+			count++;
+		}
+		
+		if(flag==1)
+		{
+			System.out.println("Player 1 wins!");
+		}
+		else if(flag==2)
+		{
+			System.out.println("Player 2 wins!");
+		}
+		else
+		{
+			System.out.println("The game is a tie!");
+		}
+	}
 
 }

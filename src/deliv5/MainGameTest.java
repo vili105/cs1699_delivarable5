@@ -1,14 +1,19 @@
 package deliv5;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class MainGameTest {
 	
 	MainGame g;
 	ByteArrayInputStream in;
+	ByteArrayOutputStream out;
 	
 	@Before
 	public void init()
@@ -57,6 +62,14 @@ public class MainGameTest {
 		assertEquals(g.Run(),0);
 	}
 
+	//Test a function that runs the game
+	@Test
+	public void Init_test()
+	{
+		System.setOut(new PrintStream(out));
+		g.Init();
+		assertTrue(out.toString().contains("x|o|x\n------\no|x| \n------\n | | \n"));
+	}
 	
 	
 }
