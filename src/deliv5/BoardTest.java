@@ -44,6 +44,18 @@ public class BoardTest {
 		assertFalse(b.checkReady());
 	}
 	
+	// Test on a method that checks to see if it is time for the program to search for a winner
+		@Test
+		public void checkReady_test1()
+		{
+			b.set(0,0, 'x');
+			b.set(0,1, 'o');
+			b.set(1,0, 'x');
+			b.set(0,2, 'o');
+			b.set(2,0, 'x');
+			assertTrue(b.checkReady());
+		}
+	
 	
 	
 }

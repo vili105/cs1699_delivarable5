@@ -60,7 +60,7 @@ public class Board
 			
 		}
 		
-		if(used_positions>5)
+		if(used_positions>4)
 		{
 			return true;
 		}
