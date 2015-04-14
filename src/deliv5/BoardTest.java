@@ -121,6 +121,17 @@ public class BoardTest {
 	}
 	
 	
+	// Test a method that checks if there is a winner by filling the diagonal cells from left to right with identical characters
+	@Test
+	public void diagLRWin_test1()
+	{
+		b.set(0,1, 'x');
+		b.set(0,1, 'o');
+		b.set(0,2, 'x');
+		assertFalse(b.diagLRWin());	
+	}
+	
+	
 	// Test a method that checks if there is a winner by filling the diagonal cells from right to left with identical characters
 	@Test
 	public void diagRLWin_test()
