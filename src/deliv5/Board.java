@@ -121,7 +121,7 @@ public class Board
 	// Implementation of the diagLRWin() method which searches for a winner by checking the RL diagonal
 	public Boolean diagRLWin()
 	{
-		if(positions[0][2]==positions[1][1] && positions[1][1] ==positions[2][0])
+		if(positions[0][2]!= ' ' && positions[0][2]==positions[1][1] && positions[1][1] ==positions[2][0])
 		{
 			return true;
 		}

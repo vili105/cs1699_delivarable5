@@ -126,8 +126,8 @@ public class BoardTest {
 	public void diagLRWin_test1()
 	{
 		b.set(0,1, 'x');
-		b.set(0,1, 'o');
-		b.set(0,2, 'x');
+		b.set(0,2, 'o');
+		b.set(1,2, 'x');
 		assertFalse(b.diagLRWin());	
 	}
 	
@@ -142,6 +142,16 @@ public class BoardTest {
 		b.set(2,1, 'o');
 		b.set(2,0, 'x');
 		assertTrue(b.diagRLWin());	
+	}
+	
+	
+	// Test a method that checks if there is a winner by filling the diagonal cells from right to left with identical characters
+	@Test
+	public void diagRLWin_test1()
+	{
+		b.set(0,1, 'x');
+		b.set(1,0, 'o');
+		assertFalse(b.diagRLWin());	
 	}
 	
 	// Test a method that prints the state of the board
