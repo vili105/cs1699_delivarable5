@@ -2,9 +2,10 @@ package deliv5;
 
 public class MainGame {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Boolean validInput(char value)
+	{
+		return true;
 	}
+	
 
 }

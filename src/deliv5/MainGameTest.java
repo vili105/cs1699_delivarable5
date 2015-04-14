@@ -1,14 +1,17 @@
 package deliv5;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
+
 
 public class MainGameTest {
 
+	// Tests a function that checks if the input is valid
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void validInput_test()
+	{	
+		MainGame g = new MainGame();
+		assertTrue(g.validInput('x'));
 	}
 
 }
