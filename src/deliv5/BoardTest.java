@@ -3,17 +3,22 @@ package deliv5;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 
 public class BoardTest {
 	
 	
 	Board b;
+	ByteArrayOutputStream out;
 	
 	@Before
 	public void init()
 	{
 		b = new Board();
+		out = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out));
 	}
 	
 
@@ -108,6 +113,19 @@ public class BoardTest {
 		assertTrue(b.diagRLWin());	
 	}
 	
+	// Test a method that prints the state of the board
+	@Test
+	public void statePrint_test()
+	{
+		b.set(0,0, 'x');
+		b.set(0,1, 'o');
+		b.set(0,2, 'x');
+		b.set(1,0, 'o');
+		b.set(1,1, 'x');
+		b.statePrint();
+		assertTrue(out.toString().contains("x|o|x\n------\no|x| \n------\n | | \n"));
+		
+	}
 	
 	
 	
