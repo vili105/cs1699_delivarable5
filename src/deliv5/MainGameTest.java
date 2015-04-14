@@ -31,7 +31,8 @@ public class MainGameTest {
 		assertFalse(g.validInput(3,5));
 	}
 
-	// Test a function that handles the player's imput
+
+	// Test a function that handles the player's input
 	@Test
 	public void Input_test()
 	{
@@ -44,5 +45,18 @@ public class MainGameTest {
 		assertEquals(temp[1],2);
 		
 	}
+
+	
+	//Test a function that runs the game
+	@Test
+	public void Run_test()
+	{
+		byte[] numbers = "1\n0\n".getBytes();
+		in = new ByteArrayInputStream(numbers);
+		System.setIn(in);
+		assertEquals(g.Run(),0);
+	}
+
+	
 	
 }

@@ -3,7 +3,18 @@ package deliv5;
 import java.util.Scanner;
 
 public class MainGame {
+	
+	private int player;
+	private Board b;
 
+	
+	public MainGame()
+	{
+		player = 2;
+		b = new Board();
+	}
+	
+	
 	// Function that tests if the input is valid
 	public Boolean validInput(int x, int y)
 	{
@@ -30,6 +41,47 @@ public class MainGame {
 		return p_input;
 		
 	}
+	
+	
+	// Implementation of the driver function
+	public int Run()
+	{
+		boolean win = false;
+		int[] position = new int[2];
+		
+		this.player = (this.player% 2)+1;
+		System.out.println("Player " + player + " is playing.");
+		position = Input();
+			
+		if(player ==1 && validInput(position[0], position[1]))
+		{
+			b.set(position[0], position[1] , 'x');
+		}
+		else if(player == 2 && validInput(position[0], position[1]))
+		{
+			b.set(position[0], position[1] , 'o');
+		}
+		
+		if(b.checkReady()==true)
+		{
+			win = b.rowWin();
+			win = b.columnWin();
+			win = b.diagRLWin();
+			win = b.diagRLWin();
+		}
+		
+		b.statePrint();
+		
+		if(win==true)
+		{
+			return player;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+		
 	
 	
 
