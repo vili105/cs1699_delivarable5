@@ -83,7 +83,7 @@ public class Board
 			}
 		}
 		
-		return true;
+		return flag;
 	}
 	
 	
