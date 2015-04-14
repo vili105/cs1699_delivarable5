@@ -33,4 +33,17 @@ public class BoardTest {
 		b.set(1,2,'x');
 		assertEquals(b.get(1,2),'x');
 	}
+	
+	
+	// Test on a method that checks to see if it is time for the program to search for a winner
+	@Test
+	public void checkReady_test()
+	{
+		b.set(1,1, 'x');
+		b.set(1,2, 'o');
+		assertFalse(b.checkReady());
+	}
+	
+	
+	
 }

@@ -38,11 +38,37 @@ public class Board
 	// Test get_test() tests get()
 	public char get(int x, int y)
 	{
+		
 		return positions[x][y];
+		
 	}
 	
-	
-	
+	// Implementation of the method checkReady() that is tested by checkReady_test()
+	public Boolean checkReady()
+	{
+		int used_positions = 0;
+		
+		for(int i=0; i<3; i++)
+		{
+			for(int j=0; j<3; j++)
+			{	
+				if(positions[i][j]!=' ')
+				{
+					used_positions++;
+				}
+			}
+			
+		}
+		
+		if(used_positions>5)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 	
 	
 
