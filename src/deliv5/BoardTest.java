@@ -1,9 +1,6 @@
 package deliv5;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,4 +25,12 @@ public class BoardTest {
 		assertEquals(b.drawInitialBoard()," | | \n------\n | | \n------\n | | \n");
 	}
 
+	
+	// Test the functionality of checking the value of the desired position
+	@Test
+	public void get_test()
+	{
+		b.set(1,2,'x');
+		assertEquals(b.get(1,2),'x');
+	}
 }

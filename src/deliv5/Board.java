@@ -1,6 +1,7 @@
 package deliv5;
 
-public class Board {
+public class Board
+{
 	
 	private char[][] positions = new char[3][3];
 	
@@ -27,6 +28,22 @@ public class Board {
 		System.out.println(temp);	
 		return temp;
 	}
+	
+	// In order for get_test() to pass I need to implement set()
+	public void set(int x, int y, char value)
+	{
+		positions[x][y] = value;
+	}
+	
+	// Test get_test() tests get()
+	public char get(int x, int y)
+	{
+		return positions[x][y];
+	}
+	
+	
+	
+	
 	
 
 }
